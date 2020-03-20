@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Covid-19</title>
+<head>
+	<body> 
+		<center>
+		<h1>Covid-19 Amerique</h1>
+
+	<script type="text/javascript" src = "jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src = "dist/Chart.bundle.min.js"> 
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var datos ={
+			type: "bar",
+			data :{
+				datasets:[{
+					label: 'Amerique',
+					data :[
+						3536,
+						424,
+						234,
+						156,
+						86,
+						82,
+						69,
+						65,
+						58,
+						45
+					],
+					backgroundColor:[
+						"#FF5733",
+						"#CEFF33",
+						"#33FF7D",
+						"#08AF9B",
+						"#9B75D7",
+						"#D675D7",
+						"#E3B011",
+						"#CD1B33",
+						"#67EB7D",
+						"#EBB8BC"
+					],
+				}],
+				labels:[
+					"United States of America",
+					"Canada",
+					"Brazil",
+					"Chile",
+					"Peru",
+					"Mexico",
+					"Panama",
+					"Argentina",
+					"Ecuador",
+					"Colombia"
+				]
+			},
+			options :{
+				responsive :true,
+			}
+		};
+		
+		var canvas = document.getElementById('chart').getContext('2d');
+		window.pie = new Chart(canvas, datos);
+	});
+
+	</script>
+</head>
+<body>
+	<div id="canvas-container" style="width:50%;">
+		<canvas id="chart" width="500" height="350"></canvas>
+	</div>
+	</center>
+</body>
+</html>
