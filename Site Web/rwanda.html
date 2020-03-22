@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+	<title>RWANDA'S SITUATION</title>
+</head>
+<body>
+	<h1> LA SITUATION AU RWANDA</h1>
+
+	<p> Voici la situation au Rwanda</p>
+	<canvas id="graphique" width="16px" height="8px"> </canvas>
+	<script >
+		var ctx = document.getElementById('graphique').getContext('2d');
+//en gros, c'est new Chart(ctx,{ type, data} )
+//type = type de bar.
+//data = qu'est ce qui saura sur le graphe.
+//data = labels  [x-axis], datasets  (=>label,data)[y-axis]
+	open("D:\Desktop\BAC2\QUADRI_2\LINFO1002(Projet2)\LINFO1002_E5\LINFO1002_E5\Covid-19\data_collection\dataliste.txt", "r") as file:
+
+		var Chart1 = new Chart(ctx,{type:'bar',data:{
+			labels:[ for (var i = 0; i < file[0].length; i++) {
+				file[0][i]
+			}],
+			datasets:
+			[
+				{
+					label:'Rwanda', 
+					backgroundColor:"yellow",
+					data:[7,2,0]
+
+				}
+				
+			]
+			}
+		);
+	</script>
+
+</body>
+</html>
+
+<!---<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+	<title>site web de coronavirus</title>
+</head>
+<body> 
+	<h1><b>INFORMATION SUR LE CORONAVIRUS</b></h1>
+	<p>Description : Le COVID-19 est malheureusement arrivé en Afrique aussi. ci-dessous, voici un graphe qui montre les totaux cas confirmé.  </p>
+	<canvas id="graphe" width="100px" height="100px"> </canvas>
+	<script>
+		var ctx = document.getElementById('graphe').getContext('2d');
+//en gros, c'est new Chart(ctx,{ type, data} )
+//type = type de bar.
+//data = qu'est ce qui saura sur le graphe.
+//data = labels  [x-axis], datasets  (=>label,data)[y-axis]
+
+		var myChart = new Chart(ctx,{type:'bar',data:{
+			labels:['Rwanda','Sud Afrique','Algerie','Cote D Ivoire','Senegale','Burkina Faso','Ghana','Cameroune'],
+			datasets: 
+			[
+				{
+					label:'Cas totaux confirmé',
+					backgroundColor: "green",
+					data:[7,62,60,6,27,20,6,5]
+				}, 
+
+				{
+					label:'Nouveaux cas totaux confirmé',
+					backgroundColor: "blue",
+					data:[2,11,11,3,1,5,4,0]
+				}
+			]
+			}
+		});
+
+	</script>
+	<br>
+	<table>
+		<tr>
+			<th>Pays</th>
+			<th>Cas confirmé</th>
+			<th>Nouveaux cas confirmé</th>
+		</tr>
+		<tr>
+			<th><a href= "rwanda.html">Rwanda</th>
+			<th>7</th>
+			<th>2</th>
+		</tr>
+		<tr>
+			<th>Sud Afrique</th>
+			<th>62</th>
+			<th>11</th>
+		</tr>
+		<tr>
+			<th><a href= "rwanda.html">Algerie</th>
+			<th>60</th>
+			<th>11</th>
+		</tr>
+		<tr>
+			<th>Cote D Ivoire</th>
+			<th>6</th>
+			<th>3</th>
+		</tr>
+		<tr>
+			<th>Senegale</th>
+			<th>27</th>
+			<th>1</th>
+		</tr>
+		<tr>
+			<th>Burkina Faso</th>
+			<th>20</th>
+			<th>5</th>
+		</tr>
+		<tr>
+			<th>Ghana</th>
+			<th>6</th>
+			<th>4</th>
+		</tr>
+		<tr>
+			<th>Cameroune</th>
+			<th>5</th>
+			<th>0</th>
+		</tr>
+	</table>
+	<a href="rwanda.html">
+	<img src="http://whereismap.net/wp-content/uploads/2018/06/Where-is-Rwanda-Where-is-Rwanda-Located-in-The-World-Rwanda-Map-800x445.jpg" alt="Image Error" width =" 400">
+	</a>
+
+
+</body>
+
+</html>
+--->
+
