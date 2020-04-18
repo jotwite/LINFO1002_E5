@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+	<html lang= "es">
+	<head>
+		<title>Stadistics</title>
+	</head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<link rel="stylesheet"  href="{{url_for ('static', filename='styles.css')}}">
+		<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+	<head>
+	<body>
+		<!-- Menu -->
+		<header id= " header"> 
+			<nav class= "menu">
+				<div class="logo-box">
+					<h1><a href="#"> Number of submissions per task  </a></h1>
+					<span class="btn-menu"><i class="fas fa-bars"></i></span>
+				</div>
+				<div class="list-container">
+        			<ul class="lists">
+        				<li><a href="/" class="active">Home</a></li>
+						<li><a href="{{url_for('genralLEPL')}}">Overall Percentage</a></li>
+            			<li><a href="#">Success and Fail </a></li>
+            			<li><a href="#">Overall analysis </a></li>
+            			<li><a href="#">About-us</a></li>
+        			</ul>
+     			</div>
+            </nav>
+            <head>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+              </head>
+            <canvas id="myChart" width="400" height="180"></canvas>
+            <script>
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: [ {% for item in labels %}
+                       "{{ item }}",
+                      {% endfor %}],
+                    datasets: [{
+                        label: 'Number of submissions',
+                        data: [{% for item in values %}
+                           "{{ item }}",
+                          {% endfor %}],
+                        backgroundColor:'rgba(75, 192, 192, 0.2)',
+                        borderColor:'rgba(153, 102, 255, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    legend: {
+                        position: 'right'
+                                        },
+                    layout:{
+                    padding:{left: 50,
+                    right: 0,
+                    top: 70,
+
+                        },
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+            </script>
+<script src="https://kit.fontawesome.com/58c0da4435.js" crossorigin="anonymous"></script>
+<script type="app.js"></script>
+</head>
+</body>
+</html>

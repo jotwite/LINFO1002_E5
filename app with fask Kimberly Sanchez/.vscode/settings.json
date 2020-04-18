@@ -1,0 +1,9 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "${workspaceFolder}\\flask-tutorial/inginious.sqlite",
+            "dialect": "SQLite",
+            "name": "data"
+        }
+    ]
+}

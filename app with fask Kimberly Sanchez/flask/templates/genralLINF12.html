@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Stadistics</title>
+	</head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<link rel="stylesheet"  href="{{url_for ('static', filename='styles.css')}}">
+		<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+	<head>
+	<body>
+		<!-- Menu -->
+		<header id= " header"> 
+			<nav class= "menu">
+				<div class="logo-box">
+					<h1><a href="#">Overall Percentage </a></h1>
+					<span class="btn-menu"><i class="fas fa-bars"></i></span>
+				</div>
+				<div class="list-container">
+        			<ul class="lists">
+        				<li><a href="/" class="active">Home</a></li>
+						<li><a href="{{url_for('genralLINF12')}}">Overall Percentage</a></li>
+            			<li><a href="#">Success and Fail </a></li>
+            			<li><a href="#">Overall analysis </a></li>
+            			<li><a href="#">About-us</a></li>
+        			</ul>
+     			</div>
+            </nav>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  </head>
+  <body>
+    <center>
+    <h1>Overall Percentage of Approved Tasks </h1></center>
+<canvas id="myChart" width="400px" height="164px"></canvas>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['succes', 'fail'],
+        datasets: [{
+            label: 'Succes',
+            data: [{% for item in values %}
+               "{{ item }}",
+              {% endfor %}],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+                    layout:{
+                    padding:{left: 50,
+                    right: 0,
+                    top: 70,
+
+                        },
+                    },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+</script>
+</body>
+</html>
