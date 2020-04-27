@@ -1,6 +1,7 @@
 from flask import Flask, render_template,url_for,request,redirect, make_response
 import sqlite3
 import json
+import functions
 
 app = Flask(__name__)
 
@@ -49,6 +50,9 @@ def genralLINF12():
     legend.append((succes * 100 )//(len(values)))
     legend.append(100- ((succes * 100 )//(len(values))))
     return render_template('genralLINF12.html', values=legend)
+@app.route('/grade1')
+def fct_for_LSINF1252():
+    return render_template('gradeLSINF1252.html', second= functions.main_for_grade1252())
 #---------------------------------------------------------------------------------
 
 @app.route('/LSINF1101')
@@ -71,7 +75,7 @@ def LSINF1101():
     return render_template('LSINF1101.html', values=frecuencia, labels=cursos)
 
 
-@app.route('/LSINF1101/porcentage')
+@app.route('/LSINF1101/pourcentage')
 def genralLINF11():
     conn = sqlite3.connect('inginious.sqlite')
     cursor = conn.cursor()
@@ -90,6 +94,11 @@ def genralLINF11():
     legend.append((succes * 100 )//(len(values)))
     legend.append(100- ((succes * 100 )//(len(values))))
     return render_template('genralLINF11.html', values=legend)
+
+@app.route('/grade')
+def fct_for_LINFO1101():
+    return render_template('gradeLINFO1101.html', content= functions.main_for_grade1101())
+
 
 #---------------------------------------------------------------------------------------
 
@@ -132,6 +141,11 @@ def genralLEPL():
     legend.append((succes * 100 )//(len(values)))
     legend.append(100- ((succes * 100 )//(len(values))))
     return render_template('genralLEPL.html', values=legend)
+
+@app.route('/grade2')
+def fct_for_LEPL1402():
+    return render_template('gradeLEPL1402.html', gear= functions.main_for_grade1402())
+
 
 
 if __name__ ==  '__main__':

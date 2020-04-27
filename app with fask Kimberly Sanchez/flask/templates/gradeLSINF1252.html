@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %} AVERAGE GRADE {% endblock %}
+{% block head1 %} AVERAGE GRADE OF LSINF1252 {% endblock %}
+
+{% block content %}
+	
+	<canvas id="graphique" width="400" height="180"> </canvas>
+	<script type = "text/javascript">
+	
+	var dataPy = {{second|tojson}}
+	var ctx = document.getElementById('graphique').getContext('2d');
+	console.log(ctx)
+	let graphique = new Chart(ctx,{
+		type:'bar',
+		data:{
+			labels:dataPy[0],
+			
+			datasets: 
+			[
+				{
+					label:'Average Grade of each task in LSINF1252',
+					data:dataPy[1]
+
+				}
+			]
+			},
+		
+            
+			options: {
+                    
+                    layout:{
+                    padding:{left: 25,
+                    		right: 25,
+                    		top: 70,
+
+                        },
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                            	suggestedMax: 110,
+                                beginAtZero: true,
+                                stepSize:10
+                            }
+                        }]
+                    }
+        	}
+	})
+
+	</script>
+{% endblock %}
