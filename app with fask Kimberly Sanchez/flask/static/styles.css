@@ -243,3 +243,11 @@
   border-radius: 10px;
   cursor: pointer;
 }
+
+.contact li{
+
+	display: inline;
+	font-size: 25px;
+	padding-left: 4%;
+	
+}

@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %} AVERAGE GRADE {% endblock %}
+{% block title %}OVERALL ANALYSIS{% endblock %}
 
 {% block link %} 
 <div class="logo-box">
-	<h1><a href="#"> Average Grade of each task </a></h1>
+	<h1><a href="#"> Average Grade of each task in LINFO1101 </a></h1>
 	<span class="btn-menu"><i class="fas fa-bars"></i></span>
 </div>
 <div class="list-container">
@@ -21,7 +21,7 @@
 {% block content %}
 
 	
-	<canvas id="graphique" width="400" height="180"> </canvas>
+	<canvas id="graphique" width="400" height="150"> </canvas>
 	<script type = "text/javascript">
 	
 	var dataPy = {{content|tojson}}
@@ -35,7 +35,7 @@
 			datasets: 
 			[
 				{
-					label:'Average Grade of each task',
+					label:'Average Grade of each task LINFO1101',
 					data:dataPy[1],
 					backgroundColor:'rgba(75, 192, 192, 0.2)',
                     borderColor:'rgba(153, 102, 255, 1)',

@@ -145,7 +145,11 @@ def genralLEPL():
 @app.route('/grade2')
 def fct_for_LEPL1402():
     return render_template('gradeLEPL1402.html', gear= functions.main_for_grade1402())
+#---------------------------------------------------------------------------------------
 
+@app.route('/contacts')
+def contacts():
+    return render_template('contacts.html')
 
 
 if __name__ ==  '__main__':

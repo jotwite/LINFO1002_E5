@@ -1,11 +1,26 @@
 {% extends "base.html" %}
 
-{% block title %} AVERAGE GRADE {% endblock %}
-{% block head1 %} AVERAGE GRADE OF LEPL1402 {% endblock %}
+{% block title %} OVERALL ANALYSIS {% endblock %}
+
+{% block link %} 
+<div class="logo-box">
+	<h1>Average Grade of each task in LEPL1402 </h1>
+	<span class="btn-menu"><i class="fas fa-bars"></i></span>
+</div>
+<div class="list-container">
+	<ul class="lists">
+		<li><a href="/" class="active">Home</a></li>
+		<li><a href="{{url_for('genralLEPL')}}">Overall Percentage</a></li>
+		<li><a href="#">Success and Fail </a></li>
+		<li><a href="{{url_for('fct_for_LEPL1402')}}">Overall analysis </a></li>
+		<li><a href="#">About-us</a></li>
+	</ul>
+	</div>
+{% endblock %}
 
 {% block content %}
 	
-	<canvas id="graphique" width="400" height="180"> </canvas>
+	<canvas id="graphique" width="400" height="150"> </canvas>
 	<script type = "text/javascript">
 	
 	var dataPy = {{gear|tojson}}
@@ -20,7 +35,10 @@
 			[
 				{
 					label:'Average Grade of each task in LEPL1402',
-					data:dataPy[1]
+					data:dataPy[1],
+					backgroundColor:'rgba(75, 192, 192, 0.2)',
+                    borderColor:'rgba(153, 102, 255, 1)',
+                    borderWidth: 1
 
 				}
 			]
@@ -32,7 +50,7 @@
                     layout:{
                     padding:{left: 25,
                     		right: 25,
-                    		top: 70,
+                    		top: 50,
 
                         },
                     },
