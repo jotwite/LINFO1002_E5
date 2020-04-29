@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="657f6aad-a0fa-4e10-94d5-ed6494758ca7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/flask-tutorial/img/chemistry-4932607_1920.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-tutorial/img/covi.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-tutorial/img/covid-19-4908692_1920.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-tutorial/img/globe-3383088_1920.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-tutorial/img/toilet-paper-4942737_1920.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-tutorial/img/world-map-1958129_1280.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-tutorial/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/flask-tutorial/static/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-tutorial/templates/full_data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-tutorial/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask-tutorial/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-tutorial/templates/kim3.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask-tutorial/templates/kim3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/templates/LINF1252.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask/templates/LSINF1252.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/templates/LPEPL1402.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask/templates/LEPL1402.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/templates/LSINF1101.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask/templates/LSINF1101.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/templates/genralLEPL.HTML" beforeDir="false" afterPath="$PROJECT_DIR$/flask/templates/generalLEPL1402.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/templates/genralLINF11.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask/templates/generalLSINF1101.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/templates/genralLINF12.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask/templates/generalLSINF1252.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/templates/gradeLEPL1402.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask/templates/gradeLEPL1402.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/templates/gradeLINFO1101.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask/templates/gradeLSINF1101.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/templates/gradeLSINF1252.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask/templates/gradeLSINF1252.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask/templates/index.html" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,50 +24,47 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="676" />
-    <option name="width" value="697" />
-    <option name="height" value="735" />
-  </component>
+  <component name="ProjectId" id="1bDPfxapDoU8kTn49z4PjTRDc4H" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Code Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Code Python" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Code Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Code Python" type="462c0819:PsiDirectoryNode" />
-              <item name="flask-tutorial" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/LINFO1002_E5/app with fask Kimberly Sanchez" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="RunManager">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Code Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/flask" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/flask/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <item itemvalue="Python.app" />
       </list>
-    </option>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -77,29 +76,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586274180210</updated>
+      <workItem from="1588163798756" duration="1359000" />
+      <workItem from="1588166169038" duration="2837000" />
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.122023806" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="616" y="221" width="424" height="491" key="FileChooserDialogImpl" timestamp="1588165845535">
+      <screen x="67" y="27" width="1533" height="873" />
+    </state>
+    <state x="616" y="221" width="424" height="491" key="FileChooserDialogImpl/67.27.1533.873@67.27.1533.873" timestamp="1588165845535" />
+    <state width="1487" height="216" key="GridCell.Tab.0.bottom" timestamp="1588168957238">
+      <screen x="67" y="27" width="1533" height="873" />
+    </state>
+    <state width="1487" height="216" key="GridCell.Tab.0.bottom/67.27.1533.873@67.27.1533.873" timestamp="1588168957238" />
+    <state width="1487" height="216" key="GridCell.Tab.0.center" timestamp="1588168957238">
+      <screen x="67" y="27" width="1533" height="873" />
+    </state>
+    <state width="1487" height="216" key="GridCell.Tab.0.center/67.27.1533.873@67.27.1533.873" timestamp="1588168957238" />
+    <state width="1487" height="216" key="GridCell.Tab.0.left" timestamp="1588168957235">
+      <screen x="67" y="27" width="1533" height="873" />
+    </state>
+    <state width="1487" height="216" key="GridCell.Tab.0.left/67.27.1533.873@67.27.1533.873" timestamp="1588168957235" />
+    <state width="1487" height="216" key="GridCell.Tab.0.right" timestamp="1588168957238">
+      <screen x="67" y="27" width="1533" height="873" />
+    </state>
+    <state width="1487" height="216" key="GridCell.Tab.0.right/67.27.1533.873@67.27.1533.873" timestamp="1588168957238" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/app_with_fask_Kimberly_Sanchez$app.coverage" NAME="app Coverage Results" MODIFIED="1588168957218" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/flask" />
   </component>
 </project>

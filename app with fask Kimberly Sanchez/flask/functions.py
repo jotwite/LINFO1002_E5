@@ -7,7 +7,7 @@ def start():
     return cursor, conn
 
 
-def gradeforlinfo1101(cursor):
+def gradeforlsinf1101(cursor):
     lst = []
     lstask = []
     lstgrade = []
@@ -19,7 +19,7 @@ def gradeforlinfo1101(cursor):
     
     return lst
 
-def gradeforlinfo1252(cursor):
+def gradeforlsinf1252(cursor):
     lst = []
     lstask = []
     lstgrade = []
@@ -63,7 +63,7 @@ def close(conn):
 
 def main_for_grade1101():
     cursor, conn = start()
-    data1 = gradeforlinfo1101(cursor)
+    data1 = gradeforlsinf1101(cursor)
     close(conn)
 
     return data1
@@ -71,7 +71,7 @@ def main_for_grade1101():
 
 def main_for_grade1252():
     cursor, conn = start()
-    data2 = gradeforlinfo1252(cursor)
+    data2 = gradeforlsinf1252(cursor)
     close(conn)
 
     return data2

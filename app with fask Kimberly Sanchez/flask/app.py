@@ -1,4 +1,4 @@
-from flask import Flask, render_template,url_for,request,redirect, make_response
+from flask import Flask, render_template, url_for, request, redirect, make_response
 import sqlite3
 import json
 import functions
@@ -11,8 +11,8 @@ def home():
     return render_template('index.html')
 
 
-@app.route('/LINF1252')
-def LINF1252():
+@app.route('/LSINF1252')
+def LSINF1252():
     conn = sqlite3.connect('inginious.sqlite')
     cursor = conn.cursor()
     legend = 'Monthly Data'
@@ -28,11 +28,11 @@ def LINF1252():
             values.append(row[2])
     for i in cursos:
         frecuencia.append(values.count(i))
-    return render_template('LINF1252.html', values=frecuencia, labels=cursos)
+    return render_template('LSINF1252.html', values=frecuencia, labels=cursos)
 
 
-@app.route('/LINF1252/porcentage')
-def genralLINF12():
+@app.route('/LSINF1252/porcentage')
+def generalLSINF1252():
     conn = sqlite3.connect('inginious.sqlite')
     cursor = conn.cursor()
     legend = []
@@ -49,7 +49,8 @@ def genralLINF12():
             fail += 1
     legend.append((succes * 100 )//(len(values)))
     legend.append(100- ((succes * 100 )//(len(values))))
-    return render_template('genralLINF12.html', values=legend)
+    return render_template('generalLSINF1252.html', values=legend)
+
 @app.route('/grade1')
 def fct_for_LSINF1252():
     return render_template('gradeLSINF1252.html', second= functions.main_for_grade1252())
@@ -76,7 +77,7 @@ def LSINF1101():
 
 
 @app.route('/LSINF1101/pourcentage')
-def genralLINF11():
+def generalLSINF1101():
     conn = sqlite3.connect('inginious.sqlite')
     cursor = conn.cursor()
     legend = []
@@ -93,17 +94,17 @@ def genralLINF11():
             fail += 1
     legend.append((succes * 100 )//(len(values)))
     legend.append(100- ((succes * 100 )//(len(values))))
-    return render_template('genralLINF11.html', values=legend)
+    return render_template('generalLSINF1101.html', values=legend)
 
 @app.route('/grade')
-def fct_for_LINFO1101():
-    return render_template('gradeLINFO1101.html', content= functions.main_for_grade1101())
+def fct_for_LSINF1101():
+    return render_template('gradeLSINF1101.html', content= functions.main_for_grade1101())
 
 
 #---------------------------------------------------------------------------------------
 
-@app.route('/LPEPL1402')
-def LPEPL1402():
+@app.route('/LEPL1402')
+def LEPL1402():
     conn = sqlite3.connect('inginious.sqlite')
     cursor = conn.cursor()
     legend = 'Monthly Data'
@@ -119,11 +120,11 @@ def LPEPL1402():
             values.append(row[2])
     for i in cursos:
         frecuencia.append(values.count(i))
-    return render_template('LPEPL1402.html', values=frecuencia, labels=cursos)
+    return render_template('LEPL1402.html', values=frecuencia, labels=cursos)
 
 
-@app.route('/LPEPL1402/porcentage')
-def genralLEPL():
+@app.route('/LEPL1402/porcentage')
+def generalLEPL1402():
     conn = sqlite3.connect('inginious.sqlite')
     cursor = conn.cursor()
     legend = []
@@ -140,7 +141,7 @@ def genralLEPL():
             fail += 1
     legend.append((succes * 100 )//(len(values)))
     legend.append(100- ((succes * 100 )//(len(values))))
-    return render_template('genralLEPL.html', values=legend)
+    return render_template('generalLEPL1402.html', values=legend)
 
 @app.route('/grade2')
 def fct_for_LEPL1402():
