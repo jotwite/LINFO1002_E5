@@ -13,7 +13,7 @@
  }
 
  body{
-	padding-top: 10rem;
+	padding-top: 0;
  	background: #fff;
  	overflow-x: hidden;
  	font-family: 'Poppins', sans-serif;
@@ -21,7 +21,7 @@
  }
 
 .main{
-	padding-top: 20rem ;
+	padding-top: 0 ;
 }
  /** Menu de navegacion **/
 
@@ -47,7 +47,7 @@
  	margin-left: 100px; 
  }
  .menu .logo-box h1 a{
- 	font-size: 60px;
+ 	font-size: 40px;
 	font-weight: 400;
 	text-decoration: none;
 	color: var(--black);
