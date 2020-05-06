@@ -126,6 +126,7 @@ def error2():
 
 @app.route('/grade1')
 def fct_for_LSINF1252():
+    """ Pour savoir ce qu'il fait voir function.py """ 
     return render_template('gradeLSINF1252.html', second= functions.main_for_grade1252())
 #---------------------------------------------------------------------------------
 
@@ -245,6 +246,7 @@ def error1():
 
 @app.route('/grade')
 def fct_for_LSINF1101():
+    """ Pour savoir ce qu'il fait voir function.py """
     return render_template('gradeLSINF1101.html', content= functions.main_for_grade1101())
 
 
@@ -366,6 +368,7 @@ def error():
 
 @app.route('/grade2')
 def fct_for_LEPL1402():
+    """ Pour savoir ce qu'il fait voir function.py """
     return render_template('gradeLEPL1402.html', gear= functions.main_for_grade1402())
 #---------------------------------------------------------------------------------------
 

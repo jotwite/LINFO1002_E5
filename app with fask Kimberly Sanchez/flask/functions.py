@@ -1,5 +1,31 @@
 import sqlite3
 
+"""
+DESCRIPTIONS :
+
+Ci-dessous,
+
+Vous allez trouvé:
+- une fonction Start()      : qui ouvre la base de donnée SQL
+
+- 3 fonctions* pour les 3 cours qui sont dans la base de donnée.
+
+- une fonction Close()      : qui ferme la base donnée.
+
+- 3 fonctions main_for_...  : qui appellent les 3 fonctions précedents.
+
+*:
+Dans chaque fonction, je crée 3 listes:
+    1. lst     : qui stocke 2 listes en mode [x,y]
+    2. lstask  : qui stocke les premiers 150 tâches qui étaient à faire pour le cours "course" en ordre croissant
+    3. lstgrade: qui stocke la moyenne de réussite de chaque tâche.
+    
+Après cela, j'ajoute lstask et lstgrade dans lst pour representer x et y respectivement.
+Donc sur notre site, mon graphe aura:
+comme x: les tâches.
+comme y: la moyenne de réussite pour chaque tâches.
+
+"""
 
 def start():
     conn = sqlite3.connect('inginious.sqlite')
@@ -8,6 +34,12 @@ def start():
 
 
 def gradeforlsinf1101(cursor):
+    """
+        Je rentre dans la base de donnée dans la partie "submissions".
+        Pour le cours de "LSINF1101-PYTHON", je prends les 150 premières tâches et leur moyenne de réussite et le stocke dans 2 listes separement.
+        Je trie les 2 listes.
+        Je retourne la liste qui contient les 2 listes    
+    """
     lst = []
     lstask = []
     lstgrade = []
@@ -22,6 +54,13 @@ def gradeforlsinf1101(cursor):
     return lst
 
 def gradeforlsinf1252(cursor):
+    """
+        Je rentre dans la base de donnée dans la partie "submissions".
+        Pour le cours de "LSINF1252", je prends les 150 premières tâches et leur moyenne de réussite et le stocke dans 2 listes separement.
+        Je trie les 2 listes.
+        Je retourne la liste qui contient les 2 listes
+        
+    """
     lst = []
     lstask = []
     lstgrade = []
@@ -36,6 +75,13 @@ def gradeforlsinf1252(cursor):
     return lst
 
 def gradeforlepl1402(cursor):
+    """
+        Je rentre dans la base de donnée dans la partie "submissions".
+        Pour le cours de "LEPL1402", je prends les 150 premières tâches et leur moyenne de réussite et le stocke dans 2 listes separement.
+        Je trie les 2 listes.
+        Je retourne la liste qui contient les 2 listes
+    """
+
     lst = []
     lstask = []
     lstgrade = []
@@ -49,25 +95,13 @@ def gradeforlepl1402(cursor):
     
     return lst
 
-"""
-def success(cursor):
-    lst = []
-    lstname = []
-    lstrial = []
-    for row in cursor.execute(''' SELECT DISTINCT task, result, course  FROM submissions WHERE course = "LSINF1101-PYTHON" LIMIT 100'''):
-        lstname.append(row[0])
-        lstrial.append(row[1])
-
-    lst = [lstname, lstrial]
-
-    return lst
-"""
-
-
 def close(conn):
     conn.close()
 
 def main_for_grade1101():
+    """
+        cette fonction doit retourner le resultat (une liste) du cours LSINF1101
+    """
     cursor, conn = start()
     data1 = gradeforlsinf1101(cursor)
     close(conn)
@@ -76,6 +110,9 @@ def main_for_grade1101():
 
 
 def main_for_grade1252():
+    """
+        cette fonction doit retourner le resultat (une liste) du cours LSINF1252
+    """
     cursor, conn = start()
     data2 = gradeforlsinf1252(cursor)
     close(conn)
@@ -83,6 +120,9 @@ def main_for_grade1252():
     return data2
 
 def main_for_grade1402():
+    """
+        cette fonction doit retourner le resultat (une liste) du cours LEPL1402
+    """
     cursor, conn = start()
     data3 = gradeforlepl1402(cursor)
     close(conn)
