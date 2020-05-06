@@ -15,13 +15,13 @@
 		<header id= " header"> 
 			<nav class= "menu">
 				<div class="logo-box">
-					<h1><a href="#">Overall Percentage </a></h1>
+					<h1><a href="#">Monthly submissions </a></h1>
 					<span class="btn-menu"><i class="fas fa-bars"></i></span>
 				</div>
 				<div class="list-container">
         			<ul class="lists">
         				<li><a href="/" class="active">Home</a></li>
-						<li><a href="{{url_for('generalLSINF1101')}}">Overall Percentage</a></li>
+						<li><a href="{{url_for('generalLSINF1101')}}">Monthly submissions</a></li>
             			<li><a href="#">Success and Fail </a></li>
             			<li><a href="{{url_for('fct_for_LSINF1101')}}">Overall analysis </a></li>
             			<li><a href="{{url_for('contacts')}}">CONTACTS</a></li>
@@ -33,27 +33,22 @@
   </head>
   <body>
     <center>
-    <h1>Overall Percentage of Approved Tasks </h1></center>
+    <h1>Monthly submissions of Approved Tasks </h1></center>
 <canvas id="myChart" width="400px" height="164px"></canvas>
 <script>
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
-    type: 'pie',
+    type: 'bar',
     data: {
-        labels: ['succes', 'fail'],
+        labels: ['February', 'March', 'April', 'May', 'June', 'July', 
+        'August', 'September', 'October', 'November', 'December' ],
         datasets: [{
-            label: 'Succes',
+            label: 'Monthly submissions ',
             data: [{% for item in values %}
                "{{ item }}",
               {% endfor %}],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)'
-            ],
+            backgroundColor:'rgba(236, 214, 27, 0.5)',
+            borderColor:'rgba(236, 214, 27, 1)',
             borderWidth: 1
         }]
     },

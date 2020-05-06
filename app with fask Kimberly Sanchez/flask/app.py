@@ -15,8 +15,6 @@ def home():
 def LSINF1252():
     conn = sqlite3.connect('inginious.sqlite')
     cursor = conn.cursor()
-    legend = 'Monthly Data'
-    labels = []
     values = []
     cursos= []
     frecuencia = []
@@ -27,29 +25,75 @@ def LSINF1252():
         if row[0] == "LSINF1252":
             values.append(row[2])
     for i in cursos:
-        frecuencia.append(values.count(i))
-    return render_template('LSINF1252.html', values=frecuencia, labels=cursos)
+        frecuencia.append((values.count(i),i))
+    frecuencia = sorted(frecuencia)
+    values = []
+    cursos = []
+    print(frecuencia)
+    for i in range(len(frecuencia)):
+        values.append(frecuencia[i][0])
+        cursos.append(frecuencia[i][1])
+    return render_template('LSINF1252.html', values=values, labels=cursos)
 
 
 @app.route('/LSINF1252/porcentage')
 def generalLSINF1252():
     conn = sqlite3.connect('inginious.sqlite')
     cursor = conn.cursor()
-    legend = []
+    values1 = 0
+    values2 = 0
+    values3 = 0
+    values4 = 0
+    values5 = 0
+    values6 = 0
+    values7 = 0
+    values8 = 0
+    values9 = 0
+    values10 = 0
+    values11 = 0
     values = []
-    succes = 0
-    fail = 0
-    for row in cursor.execute("SELECT course,grade,task FROM submissions"):
-        if row[0] == "LSINF1252":
-            values.append(row[1])
-    for i in range(len(values)):
-        if values[i] == 100.0:
-            succes += 1
-        else:
-            fail += 1
-    legend.append((succes * 100 )//(len(values)))
-    legend.append(100- ((succes * 100 )//(len(values))))
-    return render_template('generalLSINF1252.html', values=legend)
+    for row in cursor.execute("SELECT course, submitted_on FROM submissions "):
+        if row[0] == 'LSINF1252':
+            if '2019' in row[1] and '02' in row[1]:
+                values1 += 1
+
+            if '2019' in row[1] and '03' in row[1]:
+                values2 += 1
+
+            if '2019' in row[1] and '04' in row[1]:
+                values3 += 1
+
+            if '2019' in row[1] and '05' in row[1]:
+                values4 += 1
+
+            if '2019' in row[1] and '06' in row[1]:
+                values5 += 1
+
+            if '2019' in row[1] and '07' in row[1]:
+                values6 += 1
+            if '2019' in row[1] and '08' in row[1]:
+                values7 += 1
+            if '2019' in row[1] and '09' in row[1]:
+                values8 += 1
+            if '2019' in row[1] and '10' in row[1]:
+                values9 += 1
+            if '2019' in row[1] and '11' in row[1]:
+                values10 += 1
+            if '2019' in row[1] and '12' in row[1]:
+                values11 += 1
+    values.append(values1)
+    values.append(values2)
+    values.append(values3)
+    values.append(values4)
+    values.append(values5)
+    values.append(values6)
+    values.append(values7)
+    values.append(values8)
+    values.append(values9)
+    values.append(values10)
+    values.append(values11)
+
+    return render_template('generalLSINF1252.html',values = values)
 
 @app.route('/grade1')
 def fct_for_LSINF1252():
@@ -72,29 +116,74 @@ def LSINF1101():
         if row[0] == "LSINF1101-PYTHON":
             values.append(row[2])
     for i in cursos:
-        frecuencia.append(values.count(i))
-    return render_template('LSINF1101.html', values=frecuencia, labels=cursos)
+        frecuencia.append((values.count(i),i))
+    frecuencia = sorted(frecuencia)
+    values = []
+    cursos = []
+    for i in range(len(frecuencia)):
+        values.append(frecuencia[i][0])
+        cursos.append(frecuencia[i][1])
+    return render_template('LSINF1101.html', values=values, labels=cursos)
 
 
 @app.route('/LSINF1101/pourcentage')
 def generalLSINF1101():
     conn = sqlite3.connect('inginious.sqlite')
     cursor = conn.cursor()
-    legend = []
+    values1 = 0
+    values2 = 0
+    values3 = 0
+    values4 = 0
+    values5 = 0
+    values6 = 0
+    values7 = 0
+    values8 = 0
+    values9 = 0
+    values10 = 0
+    values11 = 0
     values = []
-    succes = 0
-    fail = 0
-    for row in cursor.execute("SELECT course,grade,task FROM submissions"):
-        if row[0] == "LSINF1101-PYTHON":
-            values.append(row[1])
-    for i in range(len(values)):
-        if values[i] == 100.0:
-            succes += 1
-        else:
-            fail += 1
-    legend.append((succes * 100 )//(len(values)))
-    legend.append(100- ((succes * 100 )//(len(values))))
-    return render_template('generalLSINF1101.html', values=legend)
+    for row in cursor.execute("SELECT course, submitted_on FROM submissions "):
+        if row[0] == 'LSINF1101-PYTHON':
+            if '2019' in row[1] and '02' in row[1]:
+                values1 += 1
+
+            if '2019' in row[1] and '03' in row[1]:
+                values2 += 1
+
+            if '2019' in row[1] and '04' in row[1]:
+                values3 += 1
+
+            if '2019' in row[1] and '05' in row[1]:
+                values4 += 1
+
+            if '2019' in row[1] and '06' in row[1]:
+                values5 += 1
+
+            if '2019' in row[1] and '07' in row[1]:
+                values6 += 1
+            if '2019' in row[1] and '08' in row[1]:
+                values7 += 1
+            if '2019' in row[1] and '09' in row[1]:
+                values8 += 1
+            if '2019' in row[1] and '10' in row[1]:
+                values9 += 1
+            if '2019' in row[1] and '11' in row[1]:
+                values10 += 1
+            if '2019' in row[1] and '12' in row[1]:
+                values11 += 1
+    values.append(values1)
+    values.append(values2)
+    values.append(values3)
+    values.append(values4)
+    values.append(values5)
+    values.append(values6)
+    values.append(values7)
+    values.append(values8)
+    values.append(values9)
+    values.append(values10)
+    values.append(values11)
+
+    return render_template('generalLSINF1101.html',values = values)
 
 @app.route('/grade')
 def fct_for_LSINF1101():
@@ -119,29 +208,74 @@ def LEPL1402():
         if row[0] == "LEPL1402":
             values.append(row[2])
     for i in cursos:
-        frecuencia.append(values.count(i))
-    return render_template('LEPL1402.html', values=frecuencia, labels=cursos)
+        frecuencia.append((values.count(i),i))
+    frecuencia = sorted(frecuencia)
+    values = []
+    cursos = []
+    for i in range(len(frecuencia)):
+        values.append(frecuencia[i][0])
+        cursos.append(frecuencia[i][1])
+    return render_template('LEPL1402.html', values=values, labels=cursos)
 
 
 @app.route('/LEPL1402/porcentage')
 def generalLEPL1402():
     conn = sqlite3.connect('inginious.sqlite')
     cursor = conn.cursor()
-    legend = []
+    values1 = 0
+    values2 = 0
+    values3 = 0
+    values4 = 0
+    values5 = 0
+    values6 = 0
+    values7 = 0
+    values8 = 0
+    values9 = 0
+    values10 = 0
+    values11 = 0
     values = []
-    succes = 0
-    fail = 0
-    for row in cursor.execute("SELECT course,grade,task FROM submissions"):
-        if row[0] == "LEPL1402":
-            values.append(row[1])
-    for i in range(len(values)):
-        if values[i] == 100.0:
-            succes += 1
-        else:
-            fail += 1
-    legend.append((succes * 100 )//(len(values)))
-    legend.append(100- ((succes * 100 )//(len(values))))
-    return render_template('generalLEPL1402.html', values=legend)
+    for row in cursor.execute("SELECT course, submitted_on FROM submissions "):
+        if row[0] == 'LEPL1402':
+            if '2019' in row[1] and '02' in row[1]:
+                values1 += 1
+
+            if '2019' in row[1] and '03' in row[1]:
+                values2 += 1
+
+            if '2019' in row[1] and '04' in row[1]:
+                values3 += 1
+
+            if '2019' in row[1] and '05' in row[1]:
+                values4 += 1
+
+            if '2019' in row[1] and '06' in row[1]:
+                values5 += 1
+
+            if '2019' in row[1] and '07' in row[1]:
+                values6 += 1
+            if '2019' in row[1] and '08' in row[1]:
+                values7 += 1
+            if '2019' in row[1] and '09' in row[1]:
+                values8 += 1
+            if '2019' in row[1] and '10' in row[1]:
+                values9 += 1
+            if '2019' in row[1] and '11' in row[1]:
+                values10 += 1
+            if '2019' in row[1] and '12' in row[1]:
+                values11 += 1
+    values.append(values1)
+    values.append(values2)
+    values.append(values3)
+    values.append(values4)
+    values.append(values5)
+    values.append(values6)
+    values.append(values7)
+    values.append(values8)
+    values.append(values9)
+    values.append(values10)
+    values.append(values11)
+
+    return render_template('generalLEPL1402.html',values = values)
 
 @app.route('/grade2')
 def fct_for_LEPL1402():
