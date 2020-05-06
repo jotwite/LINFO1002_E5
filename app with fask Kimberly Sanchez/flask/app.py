@@ -95,6 +95,35 @@ def generalLSINF1252():
 
     return render_template('generalLSINF1252.html',values = values)
 
+@app.route('/error2')
+def error2():
+    conn = sqlite3.connect('inginious.sqlite')
+    cursor = conn.cursor()
+    values = []
+    success = 0
+    failed = 0
+    timeout = 0
+    overflow = 0
+    error = 0
+    for row in cursor.execute("SELECT course,result FROM submissions"):
+        if row[0] == "LSINF1252" :
+            if row[1] == "success":
+                success += 1
+            if row[1] == "failed":
+                failed += 1
+            if row[1] == "timeout":
+                timeout += 1
+            if row[1] == "overflow":
+                overflow += 1
+            if row[1] == "error":
+                error += 1
+    values.append(success)
+    values.append(failed)
+    values.append(timeout)
+    values.append(overflow)
+    values.append(error)
+    return render_template('error2.html',values = values)
+
 @app.route('/grade1')
 def fct_for_LSINF1252():
     return render_template('gradeLSINF1252.html', second= functions.main_for_grade1252())
@@ -184,6 +213,35 @@ def generalLSINF1101():
     values.append(values11)
 
     return render_template('generalLSINF1101.html',values = values)
+
+@app.route('/error1')
+def error1():
+    conn = sqlite3.connect('inginious.sqlite')
+    cursor = conn.cursor()
+    values = []
+    success = 0
+    failed = 0
+    timeout = 0
+    overflow = 0
+    error = 0
+    for row in cursor.execute("SELECT course,result FROM submissions"):
+        if row[0] == "LSINF1101-PYTHON" :
+            if row[1] == "success":
+                success += 1
+            if row[1] == "failed":
+                failed += 1
+            if row[1] == "timeout":
+                timeout += 1
+            if row[1] == "overflow":
+                overflow += 1
+            if row[1] == "error":
+                error += 1
+    values.append(success)
+    values.append(failed)
+    values.append(timeout)
+    values.append(overflow)
+    values.append(error)
+    return render_template('error1.html',values = values)
 
 @app.route('/grade')
 def fct_for_LSINF1101():
@@ -276,6 +334,35 @@ def generalLEPL1402():
     values.append(values11)
 
     return render_template('generalLEPL1402.html',values = values)
+
+@app.route('/error')
+def error():
+    conn = sqlite3.connect('inginious.sqlite')
+    cursor = conn.cursor()
+    values = []
+    success = 0
+    failed = 0
+    timeout = 0
+    overflow = 0
+    error = 0
+    for row in cursor.execute("SELECT course,result FROM submissions"):
+        if row[0] == "LEPL1402" :
+            if row[1] == "success":
+                success += 1
+            if row[1] == "failed":
+                failed += 1
+            if row[1] == "timeout":
+                timeout += 1
+            if row[1] == "overflow":
+                overflow += 1
+            if row[1] == "error":
+                error += 1
+    values.append(success)
+    values.append(failed)
+    values.append(timeout)
+    values.append(overflow)
+    values.append(error)
+    return render_template('error.html',values = values)
 
 @app.route('/grade2')
 def fct_for_LEPL1402():
