@@ -14,6 +14,8 @@ def gradeforlsinf1101(cursor):
     for row in cursor.execute(''' SELECT DISTINCT course, task, grade FROM submissions WHERE course = "LSINF1101-PYTHON" LIMIT 150'''):
         lstask.append(row[1])
         lstgrade.append(row[2])
+        lstask.sort()
+        lstgrade.sort()
 
     lst = [lstask, lstgrade]
     
@@ -26,6 +28,8 @@ def gradeforlsinf1252(cursor):
     for row in cursor.execute(''' SELECT DISTINCT course, task, grade FROM submissions WHERE course = "LSINF1252" LIMIT 150'''):
         lstask.append(row[1])
         lstgrade.append(row[2])
+        lstask.sort()
+        lstgrade.sort()
 
     lst = [lstask, lstgrade]
     
@@ -38,6 +42,8 @@ def gradeforlepl1402(cursor):
     for row in cursor.execute(''' SELECT DISTINCT course, task, grade FROM submissions WHERE course = "LEPL1402" LIMIT 150'''):
         lstask.append(row[1])
         lstgrade.append(row[2])
+        lstask.sort()
+        lstgrade.sort()
 
     lst = [lstask, lstgrade]
     
