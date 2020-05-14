@@ -29,7 +29,6 @@ def LSINF1252():
     frecuencia = sorted(frecuencia)
     values = []
     cursos = []
-    print(frecuencia)
     for i in range(len(frecuencia)):
         values.append(frecuencia[i][0])
         cursos.append(frecuencia[i][1])
@@ -132,28 +131,7 @@ def fct_for_LSINF1252():
 
 @app.route('/LSINF1101')
 def LSINF1101():
-    conn = sqlite3.connect('inginious.sqlite')
-    cursor = conn.cursor()
-    legend = 'Monthly Data'
-    labels = []
-    values = []
-    cursos= []
-    frecuencia = []
-    for row in cursor.execute("SELECT course,grade,task FROM submissions"):
-        if row[0] == "LSINF1101-PYTHON" and row[2] not in cursos:
-            cursos.append(row[2])
-    for row in cursor.execute("SELECT course,grade,task FROM submissions"):
-        if row[0] == "LSINF1101-PYTHON":
-            values.append(row[2])
-    for i in cursos:
-        frecuencia.append((values.count(i),i))
-    frecuencia = sorted(frecuencia)
-    values = []
-    cursos = []
-    for i in range(len(frecuencia)):
-        values.append(frecuencia[i][0])
-        cursos.append(frecuencia[i][1])
-    return render_template('LSINF1101.html', values=values, labels=cursos)
+    return render_template('LSINF1101.html', content= functions.main_for_LSINF1101() )
 
 
 @app.route('/LSINF1101/pourcentage')
@@ -347,8 +325,10 @@ def error():
     timeout = 0
     overflow = 0
     error = 0
+    total = 0
     for row in cursor.execute("SELECT course,result FROM submissions"):
         if row[0] == "LEPL1402" :
+            total += 1
             if row[1] == "success":
                 success += 1
             if row[1] == "failed":

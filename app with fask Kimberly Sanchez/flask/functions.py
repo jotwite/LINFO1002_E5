@@ -81,7 +81,6 @@ def gradeforlepl1402(cursor):
         Je trie les 2 listes.
         Je retourne la liste qui contient les 2 listes
     """
-
     lst = []
     lstask = []
     lstgrade = []
@@ -92,7 +91,33 @@ def gradeforlepl1402(cursor):
         lstgrade.sort()
 
     lst = [lstask, lstgrade]
-    
+
+    return lst
+
+#-----------------LSINF1101---------------------------------------------------------------------
+#-----------Page d'accueil--------------------------------------------------------------------
+def LSINF1101(cursor):
+    conn = sqlite3.connect('inginious.sqlite')
+    cursor = conn.cursor()
+    values = []
+    cursos= []
+    frecuencia = []
+    lst = []
+    for row in cursor.execute('''SELECT course,grade,task FROM submissions WHERE course = "LSINF1101-PYTHON"'''):
+        if row[2] not in cursos:
+            cursos.append(row[2])
+    for row in cursor.execute('''SELECT course,grade,task FROM submissions WHERE course = "LSINF1101-PYTHON"'''):
+        values.append(row[2])
+    for i in cursos:
+        frecuencia.append((values.count(i),i))
+    frecuencia = sorted(frecuencia)
+    values = []
+    cursos = []
+    for i in range(len(frecuencia)):
+        values.append(frecuencia[i][0])
+        cursos.append(frecuencia[i][1])
+    lst = [values,cursos]
+
     return lst
 
 def close(conn):
@@ -128,3 +153,14 @@ def main_for_grade1402():
     close(conn)
 
     return data3
+
+
+def main_for_LSINF1101():
+    """
+        cette fonction doit retourner le resultat (une liste) du cours LSINF1101
+    """
+    cursor, conn = start()
+    data4= LSINF1101(cursor)
+    close(conn)
+
+    return data4

@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="657f6aad-a0fa-4e10-94d5-ed6494758ca7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/flask/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask/templates/LEPL1402.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask/templates/LEPL1402.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask/templates/LSINF1101.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask/templates/LSINF1101.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask/templates/LSINF1252.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask/templates/LSINF1252.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask/templates/generalLEPL1402.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask/templates/generalLEPL1402.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask/templates/generalLSINF1101.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask/templates/generalLSINF1101.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask/templates/generalLSINF1252.html" beforeDir="false" afterPath="$PROJECT_DIR$/flask/templates/generalLSINF1252.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,23 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../../../../Documents/BAC2/BAC 1/Algoritmo/proyecto 2 2020.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="95" column="34" lean-forward="true" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/flask/app.py">
+        <entry file="file://$PROJECT_DIR$/../../../../../../Documents/BAC2/BAC 1/Algoritmo/ex5.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2142">
-              <caret line="98" selection-start-line="98" selection-end-line="98" />
-              <folding>
-                <element signature="e#0#83#0" expanded="true" />
-              </folding>
+            <state>
+              <caret selection-end-line="4" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -47,8 +29,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../../../../../../Documents/BAC2/BAC 1/Algoritmo/proyecto 2 2020.py" />
         <option value="$PROJECT_DIR$/flask/app.py" />
+        <option value="$PROJECT_DIR$/../../../../../../Documents/BAC2/BAC 1/Algoritmo/proyecto 2 2020.py" />
       </list>
     </option>
   </component>
@@ -89,7 +71,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.app">
+  <component name="RunManager" selected="Python.proyecto 2 2020">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Code Python" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -135,8 +117,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.app" />
         <item itemvalue="Python.proyecto 2 2020" />
+        <item itemvalue="Python.app" />
       </list>
     </recent_temporary>
   </component>
@@ -157,13 +139,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -218,20 +201,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../../Documents/BAC2/BAC 1/Algoritmo/proyecto 2 2020.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="95" column="34" lean-forward="true" selection-start-line="95" selection-start-column="34" selection-end-line="95" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2142">
+        <state relative-caret-position="-629">
           <caret line="98" selection-start-line="98" selection-end-line="98" />
           <folding>
             <element signature="e#0#83#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa126608.10514/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6200">
+          <folding>
+            <element signature="e#0#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../../Documents/BAC2/BAC 1/Algoritmo/ex1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../../Documents/BAC2/BAC 1/Algoritmo/ex3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../../Documents/BAC2/BAC 1/Algoritmo/ex4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../../Documents/BAC2/BAC 1/Algoritmo/ex2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../../Documents/BAC2/BAC 1/Algoritmo/proyecto 2 2020.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1542">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../../../../Documents/BAC2/BAC 1/Algoritmo/ex5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="4" selection-end-column="21" />
         </state>
       </provider>
     </entry>

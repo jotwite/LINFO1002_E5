@@ -24,27 +24,24 @@
 						<li><a href="{{url_for('generalLSINF1101')}}">Monthly submissions</a></li>
             			<li><a href="{{url_for('error1')}}">Error,Failed..</a></li>
             			<li><a href="{{url_for('fct_for_LSINF1101')}}">Overall analysis </a></li>
-            			<li><a href="#">About-us</a></li>
+            			<li><a href="{{url_for('contacts')}}">About-us</a></li>
         			</ul>
      			</div>
             </nav>
             <head>
                 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
               </head>
-            <canvas id="myChart" width="400" height="180"></canvas>
+            <canvas id="myChart" width="400" height="200"></canvas>
             <script>
+            var dataPy = {{content|tojson}}
             var ctx = document.getElementById('myChart').getContext('2d');
             var myChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: [ {% for item in labels %}
-                       "{{ item }}",
-                      {% endfor %}],
+                    labels: dataPy[1],
                     datasets: [{
                         label: 'Number of submissions',
-                        data: [{% for item in values %}
-                           "{{ item }}",
-                          {% endfor %}],
+                        data: dataPy[0],
                         backgroundColor:'rgba(75, 192, 192, 0.2)',
                         borderColor:'rgba(153, 102, 255, 1)',
                         borderWidth: 1
@@ -52,7 +49,7 @@
                 },
                 options: {
                     legend: {
-                        position: 'right'
+                        position: 'top'
                                         },
                     layout:{
                     padding:{left: 50,
