@@ -36,6 +36,7 @@
     <h1>Error, Failed ...</h1></center>
 <canvas id="myChart" width="400px" height="160px"></canvas>
 <script>
+var dataPy = {{content|tojson}}
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'polarArea',
@@ -44,9 +45,7 @@ var myChart = new Chart(ctx, {
          ],
         datasets: [{
             label: 'Submissions',
-            data: [{% for item in values %}
-               "{{ item }}",
-              {% endfor %}],
+            data: dataPy,
               backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

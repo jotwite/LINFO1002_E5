@@ -36,6 +36,7 @@
     <h1>Monthly submissions of Approved Tasks </h1></center>
 <canvas id="myChart" width="400px" height="160px"></canvas>
 <script>
+var dataPy = {{content|tojson}}
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'horizontalBar',
@@ -44,9 +45,7 @@ var myChart = new Chart(ctx, {
         'August', 'September', 'October', 'November', 'December' ],
         datasets: [{
             label: 'Monthly submissions ',
-            data: [{% for item in values %}
-               "{{ item }}",
-              {% endfor %}],
+            data: dataPy,
             backgroundColor:'rgba(137, 245, 63, 0.6)',
             borderColor:'rgba(137, 245, 63)',
             borderWidth: 1
